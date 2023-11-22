@@ -14,6 +14,11 @@ class LaravelApi extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'id_api'  => $this->id_api,
+            'name_api' => $this->name_api,
+            'create_at' => $this->create_at,
+            'comment' => $this->comment
+        ];
     }
 }
