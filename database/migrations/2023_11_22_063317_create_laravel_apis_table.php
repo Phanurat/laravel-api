@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('laravel_apis', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_api');
+            $table->name('name_api');
             $table->timestamps();
         });
     }
